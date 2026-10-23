@@ -38,9 +38,9 @@ class NavAIChat:
         self.crossencoder_k = config["crossencoder_k"]
         self.temperature = config["temperature"]
         self.embedder = SentenceTransformer(
-            EMBEDDING_MODEL, local_files_only=True
+            EMBEDDING_MODEL, local_files_only=False
         )
-        self.reranker = CrossEncoder(RERANKER_MODEL, local_files_only=True)
+        self.reranker = CrossEncoder(RERANKER_MODEL, local_files_only=False)
         chroma = chromadb.PersistentClient(
             path=str(database_path(config["chunk_size"])),
             settings=Settings(anonymized_telemetry=False),
