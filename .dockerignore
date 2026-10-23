@@ -1,0 +1,10 @@
+﻿.git
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+data/
+reports/*
+!reports/NavAI_RAG_Methodology.pdf
+*.log
+*.tmp

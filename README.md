@@ -1,4 +1,4 @@
-# NavAI RAG Assistant
+﻿# NavAI RAG Assistant
 
 NavAI is a retrieval-augmented assistant for the NavAI website. It answers
 questions from the NavAI documentation using hybrid retrieval, then generates a
@@ -89,6 +89,29 @@ python -u evaluate_rag.py --model recursive/flint-v1.0:free --checkpoint reports
 python -m unittest discover -s tests
 ```
 
+
+## Deployment
+
+Copy `.env.example` to `.env` and fill in the required keys.
+
+Run locally:
+
+```bash
+python app.py
+```
+
+Run with Docker:
+
+```bash
+docker build -t navai-rag .
+docker run -p 8000:8000 --env-file .env navai-rag
+```
+
+The Docker image builds the chunk index, embedding store, and model cache during
+the image build. `Procfile` and `runtime.txt` are included for platform-as-a-service
+deployments.
+
 ## Methodology
 
 See `reports/NavAI_RAG_Methodology.pdf`.
+

@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "navai-rag-assistant"
+version = "0.1.0"
+description = "FastAPI RAG assistant for the NavAI website documentation."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb==1.5.9",
+    "fastapi==0.143.0",
+    "google-genai==2.29.0",
+    "groq==1.7.0",
+    "httpx==0.28.1",
+    "openai==3.3.1",
+    "psutil==7.2.2",
+    "pydantic==2.14.1",
+    "python-docx==1.2.0",
+    "python-dotenv==1.2.3",
+    "sentence-transformers==6.1.0",
+    "transformers==5.19.0",
+    "uvicorn==0.54.0",
+]
+
+[project.optional-dependencies]
+dev = []
+
+[project.scripts]
+navai-chat = "chat:main"
+
+[tool.setuptools]
+py-modules = [
+    "answers",
+    "app",
+    "build_chunks",
+    "chat",
+    "chunk_report",
+    "chunking",
+    "documents",
+    "embed_chunks",
+    "eval_cases",
+    "eval_judge",
+    "eval_report",
+    "evaluate_rag",
+    "pipeline",
+    "prompts",
+    "retrieval",
+    "server",
+    "settings",
+]
