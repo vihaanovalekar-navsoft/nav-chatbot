@@ -1,0 +1,6 @@
+{
+  "chunk_size": 256,
+  "retrieval_k": 20,
+  "crossencoder_k": 4,
+  "temperature": 0.1
+}

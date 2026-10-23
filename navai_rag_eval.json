@@ -1,0 +1,579 @@
+[
+  {
+    "answerable": true,
+    "question": "What is the meta title of NavAI's About Us page?",
+    "ideal_answer": "About NavAI | Your Data Refinery",
+    "key_points": [
+      "About NavAI | Your Data Refinery"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What is the name of the NavAI assistant mentioned with the Shopify plugin, and what four things does the page say you can do with it?",
+    "ideal_answer": "NavAI Buddy. With it you can: find frequent buyers and the most loyal customers; understand purchase frequency per month, quarter and year; predict sales accurately; know the best time and pricing for promotions and offers.",
+    "key_points": [
+      "NavAI Buddy",
+      "frequent buyers / loyal customers",
+      "purchase frequency per month, quarter, year",
+      "predict sales",
+      "best time and pricing for promotions"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "In the WhatsApp nudge example message, what is the salesman's name and where is he heading?",
+    "ideal_answer": "Daniel; he is heading to Padasena.",
+    "key_points": [
+      "Daniel",
+      "Padasena"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What exact example question does the Inventory Management page give for talking to your inventory data?",
+    "ideal_answer": "\"How many units of SKU 123 are in the Ohio warehouse?\"",
+    "key_points": [
+      "SKU 123",
+      "Ohio warehouse"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which standard reports does the Inventory page say NavAI can generate and export, and in what formats?",
+    "ideal_answer": "Inventory aging, valuation and stock turnover (given as examples, 'etc.'), exported as graphs, charts, tables, etc.",
+    "key_points": [
+      "inventory aging",
+      "valuation",
+      "stock turnover",
+      "graphs, charts, tables"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "In the permission-levels example on the Inventory page, what access does each role get?",
+    "ideal_answer": "Warehouse staff can query stock levels and locations; inventory planners can access forecasting and optimization tools; finance team members might have view-only access to valuation reports.",
+    "key_points": [
+      "warehouse staff: stock levels and locations",
+      "inventory planners: forecasting and optimization tools",
+      "finance: view-only valuation reports"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What data points does NavAI's Insurance Risk Analytics analyze?",
+    "ideal_answer": "Customer demographics, driving history, and property characteristics (among 'various data points').",
+    "key_points": [
+      "customer demographics",
+      "driving history",
+      "property characteristics"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "According to the Healthcare page, what kinds of data does life science analytics involve?",
+    "ideal_answer": "Genomic data, clinical trial data, and drug discovery data.",
+    "key_points": [
+      "genomic",
+      "clinical trial",
+      "drug discovery"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "On the Home page, which technology does NavAI use for each of 'Listens', 'Thinks' and 'Answers'?",
+    "ideal_answer": "Listens: NLP (understands the query's true intent). Thinks: machine learning algorithms (analyzes data). Answers: GenAI (answers in a human way).",
+    "key_points": [
+      "Listens = NLP",
+      "Thinks = machine learning",
+      "Answers = GenAI"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What external factors does NavAI's 'context-aware analytics' account for?",
+    "ideal_answer": "Weather reports, geographical data, inflation, 'and more'.",
+    "key_points": [
+      "weather reports",
+      "geographical data",
+      "inflation"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What does the Home page FAQ say about where customer data is stored?",
+    "ideal_answer": "Storage location can be discussed and potentially customized based on requirements and regulatory needs; NavAI typically uses secure, reputable cloud infrastructure providers; customers can also keep data in their own storage and deploy NavAI.",
+    "key_points": [
+      "customizable / discussed per requirements and regulation",
+      "typically reputable cloud providers",
+      "option to keep data in own storage"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which products does the Inventory page mention as perishables, and what feature is mentioned for expiry or recall?",
+    "ideal_answer": "Pharmaceuticals, foods, and fast-fashion products. For expiry or recall, NavAI can track batch/lot numbers where relevant (FAQ).",
+    "key_points": [
+      "pharmaceuticals",
+      "foods",
+      "fast-fashion",
+      "batch/lot number tracking"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "In the Inventory page's regional-demand example, what do people in New Orleans and New York want?",
+    "ideal_answer": "Folks in New Orleans want shoes; New Yorkers are going crazy over flip-flops.",
+    "key_points": [
+      "New Orleans: shoes",
+      "New York: flip-flops"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What percentage of their time do sales teams spend on non-sales tasks, according to NavAI?",
+    "ideal_answer": "72%.",
+    "key_points": [
+      "72%"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "NavAI's Customer Service page cites a 67% figure about chatbots. What exactly does it say?",
+    "ideal_answer": "Simple chatbots can increase sales by 67% ('Imagine what agentic AI can achieve'). Note: the same page also has a different 67% stat — 67% of customers won't wait more than 2 minutes for a response.",
+    "key_points": [
+      "simple chatbots can increase sales by 67%"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What outcomes does the Inventory Management page promise?",
+    "ideal_answer": "72% less stockouts, 21% more sales, 36% more customer satisfaction.",
+    "key_points": [
+      "72% less stockouts",
+      "21% more sales",
+      "36% more customer satisfaction"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "List all the performance figures shown on the Retail page.",
+    "ideal_answer": "-45% lost sales, +15% gross margin, -30% inventory cost, 80% faster decision making, -30% operational costs, +85% decision accuracy.",
+    "key_points": [
+      "-45% lost sales",
+      "+15% gross margin",
+      "-30% inventory cost",
+      "80% faster decision making",
+      "-30% operational costs",
+      "+85% decision accuracy"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What three results does the Customer Service page say NavAI achieves?",
+    "ideal_answer": "20% better lead qualification, 51% better engagement, 25% more sales.",
+    "key_points": [
+      "20% better lead qualification",
+      "51% better engagement",
+      "25% more sales"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What figures does the Product page give for nudges and alerts to salesmen?",
+    "ideal_answer": "40% increase in salesmen's efficiency, 7% increase in revenue, 33% increase in productivity.",
+    "key_points": [
+      "40% efficiency",
+      "7% revenue",
+      "33% productivity"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What statistics does the Home page give for the Finance industry?",
+    "ideal_answer": "1/4 of policyholders don't renew; it's a '30/60 loss ratio' if you overcharge or undercharge premiums.",
+    "key_points": [
+      "¼ policyholders don't renew",
+      "30/60 loss ratio"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "According to the Home page, what share of manufacturing customers are price-sensitive?",
+    "ideal_answer": "70%.",
+    "key_points": [
+      "70%"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "How much more expensive is attracting a new customer than retaining one, per NavAI?",
+    "ideal_answer": "5x more expensive.",
+    "key_points": [
+      "5x"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What percentage of organizations report difficulty integrating AI, and what percentage of customers expect companies to keep up with their changing needs?",
+    "ideal_answer": "95% of organizations report difficulty integrating AI; 65% of customers expect companies to keep up with their changing needs. Both are on the Product page.",
+    "key_points": [
+      "95% difficulty integrating AI",
+      "65% expect companies to keep up"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "How many data sources does NavAI support?",
+    "ideal_answer": "The documents disagree. The Home page says '32+ data sources' and its FAQ says 'Shopify and over 32 others'. The Inventory Management page says 'Over 320 data sources supported'. A good answer reports both and flags the conflict.",
+    "key_points": [
+      "Home page: 32+ / Shopify and over 32 others",
+      "Inventory page: over 320",
+      "flags the inconsistency"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Did NavAI's WhatsApp agent raise the Indian manufacturer's profits or revenue by 7%, and over what period?",
+    "ideal_answer": "The Home page case study says profits rose 7% in 14 days, with sales team productivity up 33%. The Product page separately lists '7% Increase in Revenue' and '33% Increase in Productivity' under salesmen nudges, without tying it to the case study. So the case study says profit; the Product page wording says revenue.",
+    "key_points": [
+      "Home case study: +7% profits in 14 days",
+      "+33% sales team productivity",
+      "Product page says 7% revenue",
+      "notes profit vs revenue mismatch"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "In the Colombian trading platform case study, what did the AI agent improve by 28%?",
+    "ideal_answer": "The agent is called Amelia. The body text says it increased customer retention by 28%, but the stat label says '28% More Customer Engagement'. The answer should mention both.",
+    "key_points": [
+      "agent named Amelia",
+      "body: customer retention +28%",
+      "label: 28% more customer engagement"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "How long does it take to implement NavAI?",
+    "ideal_answer": "The Home page bento section says 'Get Started in 2 Weeks'. The Retail page FAQ says the timeline varies by solution complexity and business needs and to contact the team. No firm overall figure.",
+    "key_points": [
+      "Home: Get Started in 2 Weeks",
+      "Retail FAQ: varies, contact team"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "According to the Healthcare page, which healthcare analytics services does NavAI offer?",
+    "ideal_answer": "The '360-Degree Support' section lists five: clinical, operational, financial, population health, and predictive analytics. The FAQ answer lists only three (operational, financial, predictive). A complete answer gives the five and may note the FAQ lists fewer.",
+    "key_points": [
+      "clinical",
+      "operational",
+      "financial",
+      "population health",
+      "predictive"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What does the Healthcare page say NavAI's LLM Implementation expertise offers?",
+    "ideal_answer": "To personalize popular language models, such as GPT, to 'your specific insurance business requirements' — the Healthcare page literally says insurance here (apparently copied from the Insurance page). The same page also has a heading 'GenAI in Insurance'.",
+    "key_points": [
+      "personalize models like GPT",
+      "text says 'insurance business requirements' on the healthcare page"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What is the heading of the success stories section on the Insurance page?",
+    "ideal_answer": "'Retail AI Development Success Stories' (it says Retail, even though it's the Insurance page). No actual stories are listed.",
+    "key_points": [
+      "Retail AI Development Success Stories",
+      "no stories are given"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "How secure is NavAI, according to the documents?",
+    "ideal_answer": "The Product page claims 'Your Data is 100% Secure'. Other pages make softer claims: industry-standard/industry-best protocols and encryption, compliance with data privacy regulations, secure storage and transmission. The Home FAQ also offers the option to integrate limited data, and data can stay in your own storage.",
+    "key_points": [
+      "Product page: 100% secure",
+      "others: industry-standard protocols / encryption",
+      "option to integrate limited data",
+      "can keep data in own storage"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Can users interact with NavAI only in English?",
+    "ideal_answer": "No. Several pages say 100+ languages are supported (Home, Product, Customer Service), plus a voice assistant. However, the Healthcare and Insurance pages' 'Intuitive UI' sections say you can interact 'in plain English'. A good answer gives 100+ languages and notes the English-only wording on those two pages.",
+    "key_points": [
+      "100+ languages",
+      "Healthcare/Insurance pages say 'plain English'"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "How many team members are named on the About Us page, and which of them are data scientists?",
+    "ideal_answer": "Six are named: Priyanka Rungta, Ramana Reddy, Ramaswamy Iyer, Chandresh Rai, Swapnil Tripathi, Vaibhav Arora. Two are described as data scientists: Swapnil Tripathi and Vaibhav Arora. (Ramaswamy Iyer is a data engineer, not a data scientist.)",
+    "key_points": [
+      "6 members",
+      "Swapnil Tripathi",
+      "Vaibhav Arora",
+      "Ramaswamy is a data engineer"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Who is NavAI's Lead Marketing & Design Strategist, and what is his quote?",
+    "ideal_answer": "Chandresh Rai: \"Problem-solving is my passion, and design is my tool.\"",
+    "key_points": [
+      "Chandresh Rai",
+      "Problem-solving is my passion, and design is my tool"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What is the relationship between NavAI and Navsoft, and who founded which?",
+    "ideal_answer": "NavAI is an initiative of Navsoft. Priyanka Rungta founded Navsoft and is the Founder and CEO of NavAI.",
+    "key_points": [
+      "NavAI is an initiative of Navsoft",
+      "Priyanka Rungta founded Navsoft",
+      "Priyanka is Founder & CEO of NavAI"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "List every industry NavAI says it serves, across all the documents.",
+    "ideal_answer": "Retail, Finance, Manufacturing, Healthcare (Home page; FMCG also mentioned as 'From FMCG to Finance'); Insurance, Marketing, Real Estate (Product page); Sports (Retail page's 'Industries We Specialize'). Union: Retail, Finance, FMCG, Manufacturing, Healthcare, Insurance, Marketing, Real Estate, Sports.",
+    "key_points": [
+      "Retail",
+      "Finance",
+      "Manufacturing",
+      "Healthcare",
+      "Insurance",
+      "Marketing",
+      "Real Estate",
+      "Sports",
+      "FMCG"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which industry appears only on the Retail page's industry list, and which appears only on the Product page's?",
+    "ideal_answer": "Sports appears only on the Retail page list. Real Estate appears only on the Product page.",
+    "key_points": [
+      "Sports (Retail page only)",
+      "Real Estate (Product page only)"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "According to the Retail page, how many years of experience and how many clients does NavAI claim?",
+    "ideal_answer": "25+ years of experience and 800+ clients across industries.",
+    "key_points": [
+      "25+ years",
+      "800+ clients"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Compare the 'Our Expertise' sections of the Healthcare, Insurance and Retail pages. What's the same and what differs?",
+    "ideal_answer": "All three list the same eight areas: All AI Technologies, Data Science, Diverse Frameworks, a GenAI item, Data Cleaning, Cloud Infrastructure, Machine Learning, LLM Implementation. Differences are in wording: the GenAI item is titled 'GenAI in Insurance' on both Healthcare and Insurance pages but 'Generative AI in Retail' on the Retail page; the Data Cleaning/Data Science lines are tailored per industry; LLM Implementation says 'insurance business requirements' on Healthcare and Insurance pages and just 'business requirements' on Retail.",
+    "key_points": [
+      "same eight areas",
+      "GenAI item title differs (Insurance vs Retail)",
+      "Healthcare page uses insurance wording"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which AI frameworks does NavAI say its team is skilled in?",
+    "ideal_answer": "TensorFlow, Hugging Face, Scikit-Learn, 'and more'.",
+    "key_points": [
+      "TensorFlow",
+      "Hugging Face",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which documents describe the 'How We Do' process, and what are its stages?",
+    "ideal_answer": "The Inventory Management and Sales & Marketing pages. Stages: Strategy and Planning; Implementation; Adoption and Maintenance.",
+    "key_points": [
+      "Inventory Management page",
+      "Sales & Marketing page",
+      "Strategy and Planning",
+      "Implementation",
+      "Adoption and Maintenance"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which data sources do both the Healthcare and Insurance pages list for big data analytics?",
+    "ideal_answer": "Claims data and social media appear in both. Healthcare also lists EHRs and wearable devices; Insurance also lists customer data and market trends.",
+    "key_points": [
+      "claims data",
+      "social media"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which documents explicitly mention WhatsApp, and in what role?",
+    "ideal_answer": "Home page: AI nudges/insights delivered on WhatsApp, and a 'WhatsApp Agent' that sends nudges and alerts to salesmen (also in the case study). Customer Service page: WhatsApp as one of the support channels (with website and mobile app). Sales & Marketing page: real-time nudges sent to sales agents' WhatsApp. The Product page only says 'Integrate with Messaging Apps' without naming WhatsApp.",
+    "key_points": [
+      "Home page",
+      "Customer Service page",
+      "Sales & Marketing page",
+      "Product page does not name WhatsApp"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What do salesmen's nudges contain according to the Home, Product, and Sales & Marketing pages? Point out the difference.",
+    "ideal_answer": "Home: personalized product recommendations, hidden opportunities, best pricing. Product: personalized product recommendations, hidden opportunities, right pricing. Sales & Marketing: personalized product recommendations, optimal pricing, and the best route to follow. Difference: Sales & Marketing replaces 'hidden opportunities' with 'best route'.",
+    "key_points": [
+      "all: product recommendations + pricing",
+      "Home & Product: hidden opportunities",
+      "Sales & Marketing: best route instead"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which e-commerce, CRM or data platforms are named as integrations across the documents?",
+    "ideal_answer": "Shopify (Home, Inventory, Sales & Marketing), Magento and Salesforce (Inventory), Salesforce and spreadsheets (Sales & Marketing); general categories: ERP, POS, e-commerce, databases, spreadsheets, CRM, marketing platforms, helpdesk software.",
+    "key_points": [
+      "Shopify",
+      "Magento",
+      "Salesforce"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which documents say customer waiting time drives customers away, and do their figures agree?",
+    "ideal_answer": "Home page (Retail): '⅔ customers will walk away if you keep them waiting for more than 2 minutes for resolution'. Customer Service page: '67% of customers won't wait for more than 2 minutes for a response'. They broadly agree (⅔ ≈ 67%, 2 minutes), with slightly different wording (resolution vs response).",
+    "key_points": [
+      "Home: ⅔, 2 minutes, resolution",
+      "Customer Service: 67%, 2 minutes, response",
+      "they roughly agree"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What does NavAI say happens if a company's data isn't clean?",
+    "ideal_answer": "It can still use NavAI. Data cleaning is one of the first steps in integrating NavAI (Home FAQ); NavAI makes it a priority to clean and structure data (Sales & Marketing FAQ).",
+    "key_points": [
+      "still usable",
+      "data cleaning is an early integration step"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "What types of data does the Retail page say are needed to integrate AI?",
+    "ideal_answer": "Customer data (purchase history, demographics, preferences); product information (sales data, inventory levels); store data (foot traffic, sales figures); market data (economic indicators, competitor information, industry trends).",
+    "key_points": [
+      "customer data",
+      "product information",
+      "store data",
+      "market data"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Under the Inventory page's example permission setup, could a warehouse staffer view valuation reports?",
+    "ideal_answer": "The example does not give warehouse staff valuation access — it gives them stock levels and locations, and gives finance view-only access to valuation reports. But the page says access is configurable, so it is possible if configured. The documents don't state a hard restriction.",
+    "key_points": [
+      "example: warehouse staff get stock levels/locations only",
+      "valuation is finance view-only in the example",
+      "permissions are configurable"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Does the Inventory page give a specific accuracy figure for demand forecasting?",
+    "ideal_answer": "No. It says 'exceptional accuracy' / 'precision' with no number. The only accuracy number is '99% Accuracy' in the Home page's bento section, which is not tied to demand forecasting specifically.",
+    "key_points": [
+      "no number on Inventory page",
+      "Home bento: 99% Accuracy, not tied to forecasting"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "How did NavAI help the Colombian kitchenware retailer increase sales by 18%?",
+    "ideal_answer": "The premise mixes two case studies. The kitchenware retailer is described as South American (no country named); it got an 18% sales increase via cross-selling opportunities NavAI identified. The Colombian company is a trading platform that used the AI agent Amelia (28% retention/engagement).",
+    "key_points": [
+      "corrects the mix-up",
+      "kitchenware retailer: South American, 18% sales, cross-selling",
+      "Colombian: trading platform, Amelia"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Why does NavAI's voice assistant only work in English?",
+    "ideal_answer": "The documents don't say that. The Home page says the voice assistant lets you speak your query 'in your language', and NavAI supports 100+ languages.",
+    "key_points": [
+      "premise is false",
+      "voice assistant works in your language",
+      "100+ languages"
+    ]
+  },
+  {
+    "answerable": true,
+    "question": "Which NavAI team member is the CTO?",
+    "ideal_answer": "None is given that title. Ramana Reddy is described only as having 'technical prowess' fundamental to NavAI — no title is stated. Priyanka Rungta is the only one with a C-level title (Founder and CEO).",
+    "key_points": [
+      "no CTO named",
+      "Ramana Reddy's title not stated",
+      "Priyanka is CEO"
+    ]
+  },
+  {
+    "answerable": false,
+    "question": "What are NavAI's pricing plans?",
+    "ideal_answer": "Not stated. The Insurance FAQ only says cost varies by needs and scope, that NavAI offers flexible pricing, and to contact them for a tailored quote.",
+    "key_points": [
+      "no pricing given",
+      "cost varies / flexible pricing / contact for quote"
+    ]
+  },
+  {
+    "answerable": false,
+    "question": "In what year was NavAI founded?",
+    "ideal_answer": "Not stated. The Retail page claims 25+ years of experience, but that is not a founding year for NavAI.",
+    "key_points": [
+      "founding year not in documents"
+    ]
+  },
+  {
+    "answerable": false,
+    "question": "What is the name of the Indian manufacturer in NavAI's WhatsApp case study?",
+    "ideal_answer": "Not given; it's only described as 'a leading Indian manufacturer'.",
+    "key_points": [
+      "name not given"
+    ]
+  },
+  {
+    "answerable": false,
+    "question": "What results does the Sales & Marketing page report under 'What NavAI Achieves for You'?",
+    "ideal_answer": "None. The section only says 'Experience the benefits of AI-powered sales and marketing teams' with no figures.",
+    "key_points": [
+      "no figures in that section"
+    ]
+  },
+  {
+    "answerable": false,
+    "question": "Which underlying LLM powers NavAI's own product?",
+    "ideal_answer": "Not stated. GPT is mentioned only as an example of models NavAI can personalize for clients' requirements.",
+    "key_points": [
+      "not stated",
+      "GPT only mentioned as client customization example"
+    ]
+  },
+  {
+    "answerable": false,
+    "question": "What healthcare success stories does NavAI share?",
+    "ideal_answer": "None. The Healthcare page has a 'Healthcare Analytics Success Stories' heading with only a generic line and no actual stories.",
+    "key_points": [
+      "no stories given"
+    ]
+  }
+]
