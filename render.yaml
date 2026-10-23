@@ -1,0 +1,14 @@
+﻿services:
+  - type: web
+    name: navai-rag-assistant
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: OPEN_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
