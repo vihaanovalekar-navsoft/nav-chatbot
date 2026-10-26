@@ -1,5 +1,10 @@
 """FastAPI app for the NavAI assistant."""
 
+import os
+from pathlib import Path
+
+os.chdir(Path(__file__).resolve().parent)
+
 from contextlib import asynccontextmanager
 from typing import Literal
 
