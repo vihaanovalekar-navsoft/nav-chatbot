@@ -139,7 +139,7 @@ class EvalReportTest(unittest.TestCase):
             written = write_report(path, report_data(1))
 
             self.assertEqual(written, path)
-            self.assertIn("NavAI RAG Evaluation", path.read_text(encoding="utf-8"))
+            self.assertIn("NavBot RAG Evaluation", path.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

@@ -56,7 +56,7 @@ class JudgeTest(unittest.TestCase):
     def test_pins_judge_version_to_prompt_digest(self):
         self.assertEqual(
             (JUDGE_VERSION, prompt_fingerprint(JUDGE_INSTRUCTIONS)),
-            ("j1", "a1ba796c17b1"),
+            ("j2", "0d1289a2d2a2"),
         )
 
     def test_returns_score_and_reason(self):

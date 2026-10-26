@@ -36,7 +36,7 @@ class PipelineTest(unittest.TestCase):
         ), patch("navai.pipeline.genai.Client") as gemini_client, patch(
             "navai.pipeline.OpenAI"
         ) as openai_client, patch.dict("os.environ", env or {}, clear=True):
-            bot = pipeline.NavAIChat(model=model)
+            bot = pipeline.NavBotChat(model=model)
         return bot, client, gemini_client, openai_client
 
     def test_defaults_to_gemini(self):

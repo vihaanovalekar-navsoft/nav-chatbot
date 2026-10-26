@@ -158,7 +158,7 @@ def provider_for(model):
     return "groq"
 
 
-class NavAIChat:
+class NavBotChat:
     """Loaded retrieval and generation pipeline."""
 
     def __init__(self, model=None, reasoning_effort="default"):

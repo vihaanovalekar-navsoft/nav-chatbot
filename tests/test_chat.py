@@ -28,7 +28,7 @@ class CliTest(unittest.TestCase):
         output = io.StringIO()
 
         with patch.object(sys, "argv", ["chat.py", "What is NavAI?"]), patch(
-            "navai.chat.NavAIChat", FakeChat
+            "navai.chat.NavBotChat", FakeChat
         ), contextlib.redirect_stdout(output):
             main()
 

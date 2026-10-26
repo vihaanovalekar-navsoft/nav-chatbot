@@ -24,7 +24,7 @@ class FakeChat:
 
 class AppTest(unittest.TestCase):
     def setUp(self):
-        self.patcher = patch.object(web, "NavAIChat", FakeChat)
+        self.patcher = patch.object(web, "NavBotChat", FakeChat)
         self.patcher.start()
         self.client = TestClient(web.app)
         self.client.__enter__()

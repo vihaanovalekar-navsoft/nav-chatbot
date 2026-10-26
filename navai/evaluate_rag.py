@@ -18,7 +18,7 @@ from .eval_judge import (
     judge_answer,
 )
 from .eval_report import write_report
-from .pipeline import NavAIChat
+from .pipeline import NavBotChat
 from .prompts import (
     PROMPT_VERSION,
     SYSTEM_INSTRUCTION,
@@ -110,7 +110,7 @@ def default_reasoning_effort(model):
 def parse_args():
     """Return validated command-line options."""
     parser = argparse.ArgumentParser(
-        description="Run the NavAI RAG evaluation with a Groq judge."
+        description="Run the NavBot RAG evaluation with a Groq judge."
     )
     parser.add_argument(
         "--cases",
@@ -187,7 +187,7 @@ def main():
     reasoning_effort = (
         args.reasoning_effort or default_reasoning_effort(args.model)
     )
-    bot = NavAIChat(
+    bot = NavBotChat(
         model=args.model, reasoning_effort=reasoning_effort
     )
     token_client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])

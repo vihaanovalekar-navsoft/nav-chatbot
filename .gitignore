@@ -4,6 +4,6 @@ __pycache__/
 .pytest_cache/
 data/
 reports/*
-!reports/NavAI_RAG_Methodology.pdf
+!reports/NavBot_RAG_Methodology.pdf
 *.log
 *.tmp

@@ -1,6 +1,6 @@
-﻿# NavAI RAG Assistant
+﻿# NavBot RAG Assistant
 
-NavAI is a retrieval-augmented assistant for the NavAI website. It answers
+NavBot is a retrieval-augmented assistant for the NavAI website. It answers
 questions from the NavAI documentation using hybrid retrieval, then generates a
 short, citation-grounded answer.
 
@@ -29,7 +29,7 @@ short, citation-grounded answer.
 - `build_chunks.py` / `chunking.py` - Fixed-token chunking.
 - `embed_chunks.py` - ChromaDB embedding.
 - `tests/` - Unit tests.
-- `reports/NavAI_RAG_Methodology.pdf` - Methodology summary.
+- `reports/NavBot_RAG_Methodology.pdf` - Methodology summary.
 
 ## Setup
 
@@ -112,5 +112,5 @@ docker run -p 8000:8000 --env-file .env navai-rag
 
 ## Methodology
 
-See `reports/NavAI_RAG_Methodology.pdf`.
+See `reports/NavBot_RAG_Methodology.pdf`.
 

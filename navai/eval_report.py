@@ -381,13 +381,13 @@ def render_report(data):
         "<head>\n"
         '<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-        "<title>NavAI RAG Evaluation</title>\n"
+        "<title>NavBot RAG Evaluation</title>\n"
         f"<style>{STYLES}</style>\n"
         "</head>\n"
         "<body>\n"
         '<main class="wrap">\n'
         "<header>\n"
-        "<h1>NavAI RAG Evaluation</h1>\n"
+        "<h1>NavBot RAG Evaluation</h1>\n"
         f'<div class="meta">Generated {escape(data["generated_at"])} &middot; '
         f'{escape(data["config"]["cases_file"])}</div>\n'
         "</header>\n"

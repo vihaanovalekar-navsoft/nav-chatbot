@@ -12,7 +12,7 @@ from navai.prompts import (
 
 class SystemInstructionTest(unittest.TestCase):
     def test_uses_current_prompt_version(self):
-        self.assertEqual(PROMPT_VERSION, "v4")
+        self.assertEqual(PROMPT_VERSION, "v5")
 
     def test_stays_concise(self):
         self.assertLess(len(SYSTEM_INSTRUCTION.split()), 300)
@@ -43,6 +43,10 @@ class SystemInstructionTest(unittest.TestCase):
         self.assertIn("instead of restating", text)
         self.assertIn("do not repeat", text)
 
+    def test_names_the_assistant_navbot(self):
+        self.assertIn("You are NavBot", SYSTEM_INSTRUCTION)
+        self.assertIn("not NavAI itself", SYSTEM_INSTRUCTION)
+
 
 class PromptFingerprintTest(unittest.TestCase):
     def test_returns_short_sha256_digest(self):
@@ -50,7 +54,7 @@ class PromptFingerprintTest(unittest.TestCase):
 
     def test_pins_version_to_prompt_digest(self):
         self.assertEqual(
-            (PROMPT_VERSION, prompt_fingerprint()), ("v4", "7bd1bf92e947")
+            (PROMPT_VERSION, prompt_fingerprint()), ("v5", "1d03b2743ee5")
         )
 
     def test_changes_with_text(self):

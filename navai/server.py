@@ -47,7 +47,7 @@ def open_browser_when_started(server):
     while not server.started and not server.should_exit:
         time.sleep(0.05)
     if server.started:
-        print(f"NavAI Assistant running at {URL}")
+        print(f"NavBot running at {URL}")
         webbrowser.open(URL)
 
 

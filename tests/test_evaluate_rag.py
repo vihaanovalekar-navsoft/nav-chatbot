@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import navai.evaluate_rag as evaluate_rag
-from navai.eval_judge import JUDGE_INSTRUCTIONS
+from navai.eval_judge import JUDGE_INSTRUCTIONS, JUDGE_VERSION
 from navai.prompts import PROMPT_VERSION, SYSTEM_INSTRUCTION
 
 
@@ -35,7 +35,7 @@ class EvaluateRagTest(unittest.TestCase):
             output = Path(directory) / "report.html"
             checkpoint = Path(directory) / "checkpoint.json"
             with patch.object(
-                evaluate_rag, "NavAIChat"
+                evaluate_rag, "NavBotChat"
             ) as chat_class, patch.object(
                 evaluate_rag.genai, "Client"
             ) as client_class, patch.object(
@@ -66,7 +66,7 @@ class EvaluateRagTest(unittest.TestCase):
         self.assertEqual(report["prompt"], SYSTEM_INSTRUCTION)
         self.assertEqual(report["judge_prompt"], JUDGE_INSTRUCTIONS)
         self.assertEqual(report["config"]["prompt_version"], PROMPT_VERSION)
-        self.assertEqual(report["config"]["judge_version"], "j1")
+        self.assertEqual(report["config"]["judge_version"], JUDGE_VERSION)
         self.assertEqual(report["config"]["retrieval_mode"], "dense+bm25_rrf")
         self.assertEqual(report["config"]["reasoning_effort"], "default")
         self.assertEqual(report["config"]["answer_model"], "qwen/qwen3.8-27b")
@@ -103,7 +103,7 @@ class EvaluateRagTest(unittest.TestCase):
             checkpoint.write_text(json.dumps([row]), encoding="utf-8")
             output = Path(directory) / "report.html"
             with patch.object(
-                evaluate_rag, "NavAIChat"
+                evaluate_rag, "NavBotChat"
             ), patch.object(
                 evaluate_rag.genai, "Client"
             ), patch.object(

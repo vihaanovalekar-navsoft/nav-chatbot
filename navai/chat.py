@@ -1,9 +1,9 @@
-"""Command-line interface for the NavAI assistant."""
+"""Command-line interface for the NavBot assistant."""
 
 import sys
 
 from .answers import format_source
-from .pipeline import NavAIChat
+from .pipeline import NavBotChat
 
 
 def main():
@@ -14,7 +14,7 @@ def main():
     if not question:
         raise SystemExit("A question is required.")
 
-    result = NavAIChat().answer(question)
+    result = NavBotChat().answer(question)
     print(result["answer"])
     if result["sources"]:
         print("\nSources:")

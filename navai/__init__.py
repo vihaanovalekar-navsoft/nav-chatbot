@@ -1,1 +1,1 @@
-"""NavAI RAG assistant package."""
+"""NavBot RAG assistant package."""

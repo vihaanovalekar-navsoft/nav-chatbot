@@ -1,4 +1,4 @@
-"""FastAPI app for the NavAI assistant."""
+"""FastAPI app for the NavBot assistant."""
 
 import os
 from pathlib import Path
@@ -12,7 +12,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field, field_validator
 
-from navai.pipeline import NavAIChat
+from navai.pipeline import NavBotChat
 from navai.settings import ROOT
 
 MAX_MESSAGE_CHARS = 2000
@@ -43,11 +43,11 @@ class ChatRequest(BaseModel):
 
 @asynccontextmanager
 async def lifespan(app):
-    app.state.chat = NavAIChat()
+    app.state.chat = NavBotChat()
     yield
 
 
-app = FastAPI(title="NavAI Assistant", lifespan=lifespan)
+app = FastAPI(title="NavBot", lifespan=lifespan)
 
 
 @app.get("/")
