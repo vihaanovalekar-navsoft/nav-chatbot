@@ -1,11 +1,10 @@
 ﻿services:
   - type: web
     name: navai-rag-assistant
-    env: python
+    env: docker
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
-    healthCheckPath: /_stcore/health
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
     envVars:
       - key: OPEN_API_KEY
         sync: false

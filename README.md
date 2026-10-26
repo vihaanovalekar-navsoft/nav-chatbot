@@ -57,10 +57,10 @@ python embed_chunks.py
 
 ## Run
 
-Streamlit web app:
+FastAPI web app:
 
 ```bash
-streamlit run app.py
+python app.py
 ```
 
 Command line:
@@ -98,14 +98,14 @@ add the same keys to the app secrets.
 Run locally:
 
 ```bash
-streamlit run app.py
+python app.py
 ```
 
 Run with Docker:
 
 ```bash
 docker build -t navai-rag .
-docker run -p 8501:8501 --env-file .env navai-rag
+docker run -p 8000:8000 --env-file .env navai-rag
 ```
 
 `Procfile` and `runtime.txt` are included for platform-as-a-service deployments.
