@@ -1,4 +1,4 @@
-"""Load the NavAI retrieval models and generate answers with Groq."""
+"""Load the NavAI retrieval models and generate answers with Gemini, Groq, or OpenRouter."""
 
 import os
 from pathlib import Path
@@ -7,6 +7,8 @@ import chromadb
 import numpy as np
 from chromadb.config import Settings
 from dotenv import load_dotenv
+from google import genai
+from google.genai import types
 from groq import Groq
 from huggingface_hub import hf_hub_download
 from openai import OpenAI
@@ -19,9 +21,8 @@ from .retrieval import BM25Index, build_search_query, rerank, retrieve_hybrid
 from .settings import (
     COLLECTION_NAME,
     EMBEDDING_MODEL,
-    GROQ_MODEL,
+    GEMINI_MODEL,
     OPENROUTER_BASE_URL,
-    OPENROUTER_MODEL,
     RERANKER_MODEL,
     ROOT,
     database_path,
@@ -148,15 +149,24 @@ class CrossEncoder:
         return np.array(scores)
 
 
+def provider_for(model):
+    """Return the API provider that serves `model`."""
+    if model.startswith("gemini"):
+        return "gemini"
+    if ":" in model:
+        return "openrouter"
+    return "groq"
+
+
 class NavAIChat:
     """Loaded retrieval and generation pipeline."""
 
     def __init__(self, model=None, reasoning_effort="default"):
         load_dotenv(ROOT / ".env")
         config = load_config()
-        self.model = model or OPENROUTER_MODEL
+        self.model = model or GEMINI_MODEL
+        self.provider = provider_for(self.model)
         self.reasoning_effort = reasoning_effort
-        self.uses_openai = ":" in self.model or self.model == OPENROUTER_MODEL
         self.retrieval_k = config["retrieval_k"]
         self.crossencoder_k = config["crossencoder_k"]
         self.temperature = config["temperature"]
@@ -168,13 +178,19 @@ class NavAIChat:
         )
         self.collection = chroma.get_collection(COLLECTION_NAME)
         self.bm25 = BM25Index.from_collection(self.collection)
-        openrouter_key = (
-            os.getenv("OPEN_API_KEY")
-            or os.getenv("OPENROUTER_API_KEY")
-            or os.getenv("OPENAI_API_KEY")
-        )
+        self.gemini = None
         self.groq = None
-        if self.uses_openai:
+        if self.provider == "gemini":
+            google_key = os.getenv("GOOGLE_API_KEY")
+            if not google_key:
+                raise RuntimeError("GOOGLE_API_KEY is required for Gemini models.")
+            self.gemini = genai.Client(api_key=google_key)
+        elif self.provider == "openrouter":
+            openrouter_key = (
+                os.getenv("OPEN_API_KEY")
+                or os.getenv("OPENROUTER_API_KEY")
+                or os.getenv("OPENAI_API_KEY")
+            )
             if not openrouter_key:
                 raise RuntimeError("OPEN_API_KEY is required for OpenRouter models.")
             self.groq = OpenAI(
@@ -185,8 +201,11 @@ class NavAIChat:
                     "X-Title": "OpenCode",
                 },
             )
-        elif os.getenv("GROQ_API_KEY"):
-            self.groq = Groq(api_key=os.environ["GROQ_API_KEY"])
+        elif self.provider == "groq":
+            groq_key = os.getenv("GROQ_API_KEY")
+            if not groq_key:
+                raise RuntimeError("GROQ_API_KEY is required for Groq models.")
+            self.groq = Groq(api_key=groq_key)
 
     def prepare(self, question, history=None):
         """Return the assembled prompt, context, and reranked chunks."""
@@ -210,7 +229,21 @@ class NavAIChat:
         }
 
     def generate(self, prompt):
-        """Return Groq's answer text for `prompt`."""
+        """Return the model's answer text for `prompt`."""
+        if self.provider == "gemini":
+            response = self.gemini.models.generate_content(
+                model=self.model,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    system_instruction=SYSTEM_INSTRUCTION,
+                    # Gemini 3 degrades at low temperatures; keep its default.
+                    temperature=1.0,
+                    top_p=0.95,
+                    max_output_tokens=2048,
+                ),
+            )
+            return response.text or ""
+
         request = {
             "model": self.model,
             "messages": [
@@ -222,9 +255,9 @@ class NavAIChat:
         }
         if self.reasoning_effort != "default":
             request["reasoning_effort"] = self.reasoning_effort
-        elif not self.uses_openai:
+        elif self.provider == "groq":
             request["reasoning_effort"] = "default"
-        if self.uses_openai:
+        if self.provider == "openrouter":
             request["max_tokens"] = 2048
         else:
             request["max_completion_tokens"] = 2048

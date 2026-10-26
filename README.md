@@ -36,9 +36,9 @@ short, citation-grounded answer.
 Create a `.env` file with:
 
 ```text
-OPEN_API_KEY=...
-GROQ_API_KEY=...   # optional, for Groq models
-GOOGLE_API_KEY=... # optional, for token counting in evaluation
+GOOGLE_API_KEY=... # required by the web app
+GROQ_API_KEY=...   # required by the evaluation CLI default model
+OPEN_API_KEY=...   # required for OpenRouter models
 ```
 
 Install dependencies:

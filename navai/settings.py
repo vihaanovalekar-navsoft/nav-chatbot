@@ -9,8 +9,9 @@ DEFAULT_CHUNK_SIZE = 256
 COLLECTION_NAME = "navai_chunks"
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
-# Gemini supplies token counts; Groq supplies answers and judge results.
-TOKEN_COUNT_MODEL = "gemini-3.5-flash-lite"
+# Gemini answers chat questions and supplies eval token counts.
+GEMINI_MODEL = "gemini-3.5-flash-lite"
+TOKEN_COUNT_MODEL = GEMINI_MODEL
 GROQ_MODEL = "qwen/qwen3.8-27b"
 OPENROUTER_MODEL = "thinkingmachines/inkling-small:free"
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
