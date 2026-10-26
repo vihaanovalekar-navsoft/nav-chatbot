@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 import navai.evaluate_rag as evaluate_rag
 from navai.eval_judge import JUDGE_INSTRUCTIONS
-from navai.prompts import SYSTEM_INSTRUCTION
+from navai.prompts import PROMPT_VERSION, SYSTEM_INSTRUCTION
 
 
 class EvaluateRagTest(unittest.TestCase):
@@ -65,7 +65,7 @@ class EvaluateRagTest(unittest.TestCase):
         report = captured["report"]
         self.assertEqual(report["prompt"], SYSTEM_INSTRUCTION)
         self.assertEqual(report["judge_prompt"], JUDGE_INSTRUCTIONS)
-        self.assertEqual(report["config"]["prompt_version"], "v3")
+        self.assertEqual(report["config"]["prompt_version"], PROMPT_VERSION)
         self.assertEqual(report["config"]["judge_version"], "j1")
         self.assertEqual(report["config"]["retrieval_mode"], "dense+bm25_rrf")
         self.assertEqual(report["config"]["reasoning_effort"], "default")

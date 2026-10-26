@@ -12,7 +12,7 @@ from navai.prompts import (
 
 class SystemInstructionTest(unittest.TestCase):
     def test_uses_current_prompt_version(self):
-        self.assertEqual(PROMPT_VERSION, "v3")
+        self.assertEqual(PROMPT_VERSION, "v4")
 
     def test_stays_concise(self):
         self.assertLess(len(SYSTEM_INSTRUCTION.split()), 300)
@@ -37,6 +37,12 @@ class SystemInstructionTest(unittest.TestCase):
         self.assertIn("question is unrelated", text)
         self.assertIn("do not add citations when refusing", text)
 
+    def test_avoids_repeating_earlier_answers(self):
+        text = SYSTEM_INSTRUCTION.lower()
+
+        self.assertIn("instead of restating", text)
+        self.assertIn("do not repeat", text)
+
 
 class PromptFingerprintTest(unittest.TestCase):
     def test_returns_short_sha256_digest(self):
@@ -44,7 +50,7 @@ class PromptFingerprintTest(unittest.TestCase):
 
     def test_pins_version_to_prompt_digest(self):
         self.assertEqual(
-            (PROMPT_VERSION, prompt_fingerprint()), ("v3", "3d613ceffaf4")
+            (PROMPT_VERSION, prompt_fingerprint()), ("v4", "7bd1bf92e947")
         )
 
     def test_changes_with_text(self):
