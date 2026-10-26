@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from eval_report import render_report, write_report
+from navai.eval_report import render_report, write_report
 
 
 def report_data(score):

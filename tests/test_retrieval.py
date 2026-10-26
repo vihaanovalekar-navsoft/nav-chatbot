@@ -1,6 +1,6 @@
 import unittest
 
-from retrieval import (
+from navai.retrieval import (
     BM25Index,
     build_search_query,
     reciprocal_rank_fusion,

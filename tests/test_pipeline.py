@@ -2,9 +2,9 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-import pipeline
-from prompts import SYSTEM_INSTRUCTION
-from settings import OPENROUTER_MODEL
+import navai.pipeline as pipeline
+from navai.prompts import SYSTEM_INSTRUCTION
+from navai.settings import OPENROUTER_MODEL
 
 
 def sample_chunks():
@@ -27,13 +27,13 @@ class PipelineConfigTest(unittest.TestCase):
             "temperature": 0.1,
         }
 
-        with patch("pipeline.load_config", return_value=config), patch(
-            "pipeline.SentenceTransformer"
-        ), patch("pipeline.CrossEncoder"), patch(
-            "pipeline.chromadb.PersistentClient"
-        ) as client, patch("pipeline.OpenAI"), patch(
-            "pipeline.BM25Index.from_collection"
-        ), patch("pipeline.load_dotenv"), patch.dict(
+        with patch("navai.pipeline.load_config", return_value=config), patch(
+            "navai.pipeline.SentenceTransformer"
+        ), patch("navai.pipeline.CrossEncoder"), patch(
+            "navai.pipeline.chromadb.PersistentClient"
+        ) as client, patch("navai.pipeline.OpenAI"), patch(
+            "navai.pipeline.BM25Index.from_collection"
+        ), patch("navai.pipeline.load_dotenv"), patch.dict(
             "os.environ", {"OPEN_API_KEY": "test"}
         ):
             bot = pipeline.NavAIChat()
@@ -49,9 +49,9 @@ class PipelineConfigTest(unittest.TestCase):
             0
         ].message.content = "Answer [1]."
         with patch(
-            "pipeline.retrieve_hybrid", return_value=[]
+            "navai.pipeline.retrieve_hybrid", return_value=[]
         ) as retrieve, patch(
-            "pipeline.rerank", return_value=sample_chunks()
+            "navai.pipeline.rerank", return_value=sample_chunks()
         ) as rerank:
             prepared = bot.prepare("question")
             result = bot.answer("question")

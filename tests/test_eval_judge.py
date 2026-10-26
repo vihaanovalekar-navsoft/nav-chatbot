@@ -4,13 +4,13 @@ from types import SimpleNamespace
 import httpx
 from groq import BadRequestError
 
-from eval_judge import (
+from navai.eval_judge import (
     JUDGE_INSTRUCTIONS,
     JUDGE_MODEL,
     JUDGE_VERSION,
     judge_answer,
 )
-from prompts import prompt_fingerprint
+from navai.prompts import prompt_fingerprint
 
 
 class FakeCompletions:

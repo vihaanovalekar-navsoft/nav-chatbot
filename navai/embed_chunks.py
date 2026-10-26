@@ -8,7 +8,7 @@ import chromadb
 from chromadb.config import Settings
 from sentence_transformers import SentenceTransformer
 
-from settings import (
+from .settings import (
     COLLECTION_NAME,
     EMBEDDING_MODEL,
     chunk_file,

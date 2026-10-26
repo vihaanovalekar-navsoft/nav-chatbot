@@ -1,0 +1,1 @@
+"""NavAI RAG assistant package."""

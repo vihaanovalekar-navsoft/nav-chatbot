@@ -5,9 +5,9 @@ import sys
 
 import streamlit as st
 
-import pipeline
-from answers import format_source
-from settings import ROOT
+from navai import pipeline
+from navai.answers import format_source
+from navai.settings import ROOT
 
 # Allow Streamlit Cloud secrets to satisfy the pipeline's environment lookups.
 try:

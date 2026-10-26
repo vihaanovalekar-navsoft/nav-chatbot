@@ -1,6 +1,6 @@
 import unittest
 
-from chunking import chunk_text
+from navai.chunking import chunk_text
 
 
 class CharacterTokenizer:

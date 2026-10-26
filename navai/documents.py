@@ -7,7 +7,7 @@ from pathlib import Path
 
 from docx import Document
 
-from chunking import chunk_text
+from .chunking import chunk_text
 
 
 def iter_documents(archive):

@@ -1,6 +1,6 @@
 import unittest
 
-from answers import build_result, sources_for
+from navai.answers import build_result, sources_for
 
 
 def sample_chunks():

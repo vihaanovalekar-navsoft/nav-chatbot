@@ -2,8 +2,8 @@
 
 import sys
 
-from answers import format_source
-from pipeline import NavAIChat
+from .answers import format_source
+from .pipeline import NavAIChat
 
 
 def main():

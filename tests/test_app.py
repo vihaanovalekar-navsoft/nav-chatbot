@@ -1,9 +1,9 @@
 import unittest
 
-import pipeline
 import os
 
-from settings import ROOT
+from navai import pipeline
+from navai.settings import ROOT
 from streamlit.testing.v1 import AppTest
 
 APP_PATH = str(ROOT / "app.py")

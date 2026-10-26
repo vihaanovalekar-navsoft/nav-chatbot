@@ -3,8 +3,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from eval_cases import load_cases
-from settings import ROOT
+from navai.eval_cases import load_cases
+from navai.settings import ROOT
 
 
 class EvalCasesTest(unittest.TestCase):

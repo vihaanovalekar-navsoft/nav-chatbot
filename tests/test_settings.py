@@ -4,8 +4,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-import settings
-from settings import database_path
+import navai.settings as settings
+from navai.settings import database_path
 
 
 class ConfigTest(unittest.TestCase):

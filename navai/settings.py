@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config.json"
 DEFAULT_CHUNK_SIZE = 256
 COLLECTION_NAME = "navai_chunks"

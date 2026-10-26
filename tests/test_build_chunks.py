@@ -1,6 +1,6 @@
 import unittest
 
-from settings import chunk_file
+from navai.settings import chunk_file
 
 
 class OutputPathTest(unittest.TestCase):

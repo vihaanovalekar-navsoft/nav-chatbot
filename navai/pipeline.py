@@ -13,10 +13,10 @@ from openai import OpenAI
 from tokenizers import Tokenizer
 import onnxruntime as ort
 
-from answers import build_result
-from prompts import SYSTEM_INSTRUCTION, build_prompt, format_context
-from retrieval import BM25Index, build_search_query, rerank, retrieve_hybrid
-from settings import (
+from .answers import build_result
+from .prompts import SYSTEM_INSTRUCTION, build_prompt, format_context
+from .retrieval import BM25Index, build_search_query, rerank, retrieve_hybrid
+from .settings import (
     COLLECTION_NAME,
     EMBEDDING_MODEL,
     GROQ_MODEL,

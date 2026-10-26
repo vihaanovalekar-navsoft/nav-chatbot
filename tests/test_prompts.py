@@ -1,6 +1,6 @@
 import unittest
 
-from prompts import (
+from navai.prompts import (
     PROMPT_VERSION,
     SYSTEM_INSTRUCTION,
     build_prompt,

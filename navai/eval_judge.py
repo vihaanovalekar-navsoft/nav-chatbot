@@ -5,7 +5,7 @@ from typing import Literal
 from groq import BadRequestError
 from pydantic import BaseModel, ValidationError, field_validator
 
-from settings import GROQ_MODEL
+from .settings import GROQ_MODEL
 
 JUDGE_MODEL = GROQ_MODEL
 JUDGE_VERSION = "j1"

@@ -31,25 +31,7 @@ dependencies = [
 dev = []
 
 [project.scripts]
-navai-chat = "chat:main"
+navai-chat = "navai.chat:main"
 
 [tool.setuptools]
-py-modules = [
-    "answers",
-    "app",
-    "build_chunks",
-    "chat",
-    "chunk_report",
-    "chunking",
-    "documents",
-    "embed_chunks",
-    "eval_cases",
-    "eval_judge",
-    "eval_report",
-    "evaluate_rag",
-    "pipeline",
-    "prompts",
-    "retrieval",
-    "server",
-    "settings",
-]
+packages = ["navai"]

@@ -6,9 +6,9 @@ from pathlib import Path
 
 from transformers import AutoTokenizer
 
-from chunk_report import print_stats
-from documents import build_rows
-from settings import EMBEDDING_MODEL, ROOT, chunk_file, load_config
+from .chunk_report import print_stats
+from .documents import build_rows
+from .settings import EMBEDDING_MODEL, ROOT, chunk_file, load_config
 
 ARCHIVE = ROOT / "Docx.zip"
 SPECIAL_TOKENS = 2

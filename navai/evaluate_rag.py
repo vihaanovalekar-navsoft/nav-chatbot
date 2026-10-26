@@ -9,23 +9,23 @@ from pathlib import Path
 
 from google import genai
 
-from answers import build_result
-from eval_cases import load_cases
-from eval_judge import (
+from .answers import build_result
+from .eval_cases import load_cases
+from .eval_judge import (
     JUDGE_INSTRUCTIONS,
     JUDGE_TEMPERATURE,
     JUDGE_VERSION,
     judge_answer,
 )
-from eval_report import write_report
-from pipeline import NavAIChat
-from prompts import (
+from .eval_report import write_report
+from .pipeline import NavAIChat
+from .prompts import (
     PROMPT_VERSION,
     SYSTEM_INSTRUCTION,
     prompt_fingerprint,
 )
-from retrieval import BM25_B, BM25_K1, RRF_K
-from settings import (
+from .retrieval import BM25_B, BM25_K1, RRF_K
+from .settings import (
     EMBEDDING_MODEL,
     GROQ_MODEL,
     GROQ_RPM,

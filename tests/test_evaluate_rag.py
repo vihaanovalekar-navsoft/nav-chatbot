@@ -7,9 +7,9 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-import evaluate_rag
-from eval_judge import JUDGE_INSTRUCTIONS
-from prompts import SYSTEM_INSTRUCTION
+import navai.evaluate_rag as evaluate_rag
+from navai.eval_judge import JUDGE_INSTRUCTIONS
+from navai.prompts import SYSTEM_INSTRUCTION
 
 
 class EvaluateRagTest(unittest.TestCase):

@@ -4,7 +4,7 @@ import sys
 import unittest
 from unittest.mock import patch
 
-from chat import main
+from navai.chat import main
 
 
 class FakeChat:
@@ -28,7 +28,7 @@ class CliTest(unittest.TestCase):
         output = io.StringIO()
 
         with patch.object(sys, "argv", ["chat.py", "What is NavAI?"]), patch(
-            "chat.NavAIChat", FakeChat
+            "navai.chat.NavAIChat", FakeChat
         ), contextlib.redirect_stdout(output):
             main()
 
