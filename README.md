@@ -57,10 +57,10 @@ python embed_chunks.py
 
 ## Run
 
-Web app:
+Streamlit web app:
 
 ```bash
-python app.py
+streamlit run app.py
 ```
 
 Command line:
@@ -92,24 +92,23 @@ python -m unittest discover -s tests
 
 ## Deployment
 
-Copy `.env.example` to `.env` and fill in the required keys.
+Copy `.env.example` to `.env` and fill in the required keys. For Streamlit Cloud,
+add the same keys to the app secrets.
 
 Run locally:
 
 ```bash
-python app.py
+streamlit run app.py
 ```
 
 Run with Docker:
 
 ```bash
 docker build -t navai-rag .
-docker run -p 8000:8000 --env-file .env navai-rag
+docker run -p 8501:8501 --env-file .env navai-rag
 ```
 
-The Docker image builds the chunk index, embedding store, and model cache during
-the image build. `Procfile` and `runtime.txt` are included for platform-as-a-service
-deployments.
+`Procfile` and `runtime.txt` are included for platform-as-a-service deployments.
 
 ## Methodology
 

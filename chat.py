@@ -2,6 +2,7 @@
 
 import sys
 
+from answers import format_source
 from pipeline import NavAIChat
 
 
@@ -18,14 +19,7 @@ def main():
     if result["sources"]:
         print("\nSources:")
         for source in result["sources"]:
-            distance = source["distance"]
-            distance_text = "n/a" if distance is None else f"{distance:.4f}"
-            print(
-                f"[{source['label']}] {source['doc']} | "
-                f"chunk {source['chunk_index']} | "
-                f"rerank {source['rerank']:.4f} | "
-                f"distance {distance_text}"
-            )
+            print(format_source(source))
 
 
 if __name__ == "__main__":

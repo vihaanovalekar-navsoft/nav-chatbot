@@ -27,6 +27,18 @@ def sources_for(answer, chunks):
     ]
 
 
+def format_source(source):
+    """Return one citation source as a readable status line."""
+    distance = source["distance"]
+    distance_text = "n/a" if distance is None else f"{distance:.4f}"
+    return (
+        f"[{source['label']}] {source['doc']} | "
+        f"chunk {source['chunk_index']} | "
+        f"rerank {source['rerank']:.4f} | "
+        f"distance {distance_text}"
+    )
+
+
 def build_result(text, chunks):
     """Return the final answer and its citation-gated sources."""
     answer = (text or "").strip()
